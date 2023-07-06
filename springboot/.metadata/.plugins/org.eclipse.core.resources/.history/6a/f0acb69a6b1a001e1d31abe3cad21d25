@@ -1,0 +1,5 @@
+package com.jspiders.quizapp.pojo;
+
+public class QuestionPOJO {
+
+}

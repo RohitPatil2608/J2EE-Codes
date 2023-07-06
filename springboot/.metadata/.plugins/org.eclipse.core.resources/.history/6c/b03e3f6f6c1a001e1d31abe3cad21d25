@@ -1,0 +1,9 @@
+package com.jspiders.quizapp.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class QuestionService {
+	
+	@Autowired
+	QuestionService questionService;
+}

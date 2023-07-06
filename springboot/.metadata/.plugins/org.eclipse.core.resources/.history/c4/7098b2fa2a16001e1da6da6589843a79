@@ -1,0 +1,11 @@
+package com.jspiders.springbootstudentmanagement.response;
+
+import java.util.List;
+
+import com.jspiders.springbootstudentmanagement.POJO.StudentPOJO;
+
+public class StudentResponse {
+	private String msg;
+	private StudentPOJO data;
+	private List<StudentPOJO> list;
+}

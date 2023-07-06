@@ -1,0 +1,22 @@
+package com.jspiders.springcorexml.main;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.jspiders.springcorexml.bean.StudentBean;
+
+public class StudentMain {
+
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("StudentConfig.xml");
+
+		StudentBean student1 = (StudentBean) context.getBean("Student1");
+		System.out.println(student1);
+		
+		StudentBean student2 = (StudentBean) context.getBean("Student2");
+		System.out.println(student2);
+
+		((ClassPathXmlApplicationContext) context).close();
+
+	}
+}

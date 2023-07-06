@@ -1,0 +1,25 @@
+package com.jspiders.springbootstudentmanagement.service;
+
+import org.apache.catalina.startup.ClassLoaderFactory.Repository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.jspiders.springbootstudentmanagement.POJO.StudentPOJO;
+import com.jspiders.springbootstudentmanagement.repository.StudentRepository;
+
+@Service
+public class StudentService {
+	
+	@Autowired
+	private StudentRepository repository;
+
+	public StudentPOJO addStudent(StudentPOJO pojo) {
+		StudentPOJO student= repository.save(pojo);
+		return student;
+	}
+
+	public StudentPOJO addStudent(int id) {
+		StudentPOJO student=repository.findById(id).orElse(null);
+		return student;
+	}
+}
